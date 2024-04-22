@@ -40,7 +40,7 @@ function createCards(data) {
         errorMsg.textContent = "Aucun resultat"
     }
   data.forEach((el) => {
-    const url = `https://fr.wikipedia.org/?curid=${el.pageid}`;
+    const url = `https://en.wikipedia.org/?curid=${el.pageid}`;
     const card = document.createElement("div");
     card.className = "result-item";
     card.innerHTML = `
