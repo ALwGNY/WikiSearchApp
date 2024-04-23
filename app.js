@@ -40,14 +40,14 @@ function createCards(data) {
         errorMsg.textContent = "Aucun resultat"
     }
   data.forEach((el) => {
-    const url = `https://en.wikipedia.org/?curid=${el.pageid}`;
+    const urlId = `https://en.wikipedia.org/?curid=${el.pageid}`;
     const card = document.createElement("div");
     card.className = "result-item";
     card.innerHTML = `
       <h3 class="result-title">
-      <a href="${url}" target="_blank">${el.title}</a>
+      <a href="${urlId}" target="_blank">${el.title}</a>
       </h3>
-      <a href="${url}" target="_blank" class="result-link">${url}</a>
+      <a href="${urlId}" target="_blank" class="result-link">${urlId}</a>
       <span class="result-snippet">${el.snippet}</span>
       <br>
       `;
